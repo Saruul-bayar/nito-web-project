@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+    --textColor: #edf0f1;
+    --greyBg: #24252a;
+    --blueColor: #0088A9;
+    --orangeColor: rgb(255, 166, 0);
+}
+
+.bigBanner {
+    /* width: 100%; */
+    height: 100vh;
+    background-image: url('../../img/Home/office1.png');
+    background-size: cover;
+    background-position: center;
+    animation: slider 12s linear infinite;
+    font-family: "Montserrat", sans-serif;
+    color: var(--textColor);
+}
+
+.blackGlass {
+    width: 100%;
+    height: 100%;
+    background-color: #0000009f;   
+}
+
+@keyframes slider {
+    0% {
+        background-image: url('../../img/Home/office1.png');
+    }
+    25% {
+        background-image: url('../../img/Home/office1.png');
+    }
+    35% {
+        background-image: url('../../img/Home/office2.png');
+    }
+    60% {
+        background-image: url('../../img/Home/office2.png');
+    }
+    70%{
+        background-image: url('../../img/Home/office3.png');
+    }
+    90%{
+        background-image: url('../../img/Home/office3.png');
+    }
+}
+
+.bigBanner h1 {
+    font-size: 80px;
+}
+
+.bigBanner p {
+    margin-bottom: 20px;
+}
+
+.bannerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 90%;
+    padding: 10% 15%;
+}
+.bannerBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.bannerBottom p a {
+    text-decoration: underline;
+}
+.textColorOrange {
+    color: var(--orangeColor);
+}
+
+.titleAnimation:hover::after {
+    content: " :)";
+    /* transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19); */
+}
+
+@media only screen and (max-width: 1270px) {
+    .bannerBottom {
+        padding: 0 10%;
+    }
+    .bannerTop h1 {
+        font-size: 75px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .bannerTop {
+        padding: 100px 15%;
+    }
+    .bigBanner p {
+        font-size: 14px;
+    }
+    .bigBanner a {
+        font-size: 14px;
+    }
+    .bannerTop h1 {
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .bigBanner {
+        height: 80vh;
+    }
+    .bigBanner h1 {
+        font-size: 55px;
+    }
+    .bigBanner p {
+        font-size: 12px;
+    }
+    .bigBanner a {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .bannerTop {
+        padding: 100px 10%;
+    }
+    .bigBanner h1 {
+        font-size: 35px;
+    }
+    .bigBanner p {
+        font-size: 12px;
+    }
+    .bigBanner a {
+        font-size: 12px;
+    }
+}

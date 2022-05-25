@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+:root {
+  --textColor: #edf0f1;
+  --greyBg: #24252a;
+  --blueColor: #0088a9;
+  --orangeColor: rgb(255, 166, 0);
+  --iconBox1: rgba(255, 183, 0, 0.2);
+  --iconBox2: rgba(0, 255, 85, 0.2);
+  --iconBox3: rgba(0, 179, 255, 0.2);
+  --iconBox4: rgba(144, 0, 255, 0.2);
+  --iconBox5: rgba(255, 0, 59, 0.2);
+  --iconBox6: rgba(255, 183, 0, 0.2);
+}
+
+.gridWhy {
+  display: grid;
+  padding: 100px 15%;
+  font-family: "Montserrat", sans-serif;
+}
+.reasonItems {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-family: "Montserrat", sans-serif;
+  grid-gap: 20px;
+}
+.iconBoxTitle {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.gridWhy .iconBox1,
+.gridWhy .iconBox2,
+.gridWhy .iconBox3,
+.gridWhy .iconBox4,
+.gridWhy .iconBox5,
+.gridWhy .iconBox6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: auto;
+  padding: 20px;
+  border-radius: 30px;
+  opacity: 0;
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+    opacity 0.3s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.gridWhy .isVisible {
+  opacity: 1;
+  transform: translateY(0) rotateZ(0);
+}
+
+.gridWhy > section p {
+  word-wrap: break-word;
+}
+
+.gridWhy > section h2 {
+  font-size: 2.3rem;
+}
+
+.gridWhy > section h3 {
+  font-size: 1.3rem;
+}
+
+.gridWhy > section p {
+  font-size: 1.1rem;
+}
+
+.iconBoxTitle {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.iconBox1 {
+  background-color: var(--iconBox1);
+}
+.iconBox2 {
+  background-color: var(--iconBox2);
+}
+.iconBox3 {
+  background-color: var(--iconBox3);
+}
+.iconBox4 {
+  background-color: var(--iconBox4);
+}
+.iconBox5 {
+  background-color: var(--iconBox5);
+}
+.iconBox6 {
+  background-color: var(--iconBox6);
+}
+
+@media only screen and (max-width: 1000px) {
+  .gridWhy > section h2 {
+    font-size: 2.2rem;
+  }
+
+  .gridWhy > section h3 {
+    font-size: 1.2rem;
+  }
+
+  .gridWhy > section p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .gridWhy > section {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .gridWhy > section h2 {
+    font-size: 2.1rem;
+  }
+
+  .gridWhy > section h3 {
+    font-size: 1.1rem;
+  }
+
+  .gridWhy > section p {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gridWhy > section {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .gridWhy > section h2 {
+    font-size: 1.8rem;
+  }
+
+  .gridWhy > section h3 {
+    font-size: 1rem;
+  }
+
+  .gridWhy > section p {
+    font-size: 0.8rem;
+  }
+}

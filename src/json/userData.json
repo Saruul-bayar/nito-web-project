@@ -1,0 +1,31 @@
+[
+  { "sureName": "123", "name": "123", "email": "123", "password": "123" },
+
+  {
+    "sureName": "Bat",
+    "name": "Bold",
+    "email": "bold@gmail.com",
+    "password": "bold"
+  },
+
+  {
+    "sureName": "Suh",
+    "name": "Anujin",
+    "email": "anujin@yahoo.com",
+    "password": "anujin"
+  },
+
+  {
+    "sureName": "Dorj",
+    "name": "Tsogoo",
+    "email": "tsogoo@gmail.com",
+    "password": "tsogoo"
+  },
+
+  {
+    "sureName": "Amar",
+    "name": "Mend",
+    "email": "mend@yahoo.com",
+    "password": "mend"
+  }
+]

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Nito Job BestJob BestEmployer Employer Employee BestSalary Salary BestTeam Team Ажил Ажилтан Мэргэжилтэн Өндөр Цалин Тухтай оффис Баг хамт олон"
+    />
+    <meta
+      name="description"
+      content="Дундаж цалинаас өндөр ажлын байр хайж байвал та манай вебсайтаар зохилоход хангалттай. Nito дээр монголд байж болох хамгийн тав тухтай, цалин өндөртэй, эелдгээр хүлээж авах таны чадварыг хөгжүүлэх баг хамт олон хүлээж байна. Мэдээж компани болгон өөр өөрийн тусгай давуу талтай учир дуртай ажилаа сонгон CV-гээ илгээхэд л болно. CV-г бид таньд хялбар хийж болохуйцаар бэлдэж өгнө. If you are looking for a job above the average salary, all you have to do is visit our website. A team is waiting for you at Nito to develop your ability to be the most comfortable, well-paid and polite person in Mongolia. Of course, each company has its own special advantages, so just choose your favorite job and send your CV. We will prepare your CV as easily as possible."
+    />
+    <script
+      src="https://kit.fontawesome.com/ce25a366df.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css links -->
+    <link rel="stylesheet" href="../css/index/header.css" />
+    <link rel="stylesheet" href="../css/index/footer.css" />
+    <!-- <link rel="stylesheet" href="css/signIn/signIn.css" /> -->
+    <style>
+      :root {
+        --textColor: #edf0f1;
+        --greyBg: #24252a;
+        --blueColor: #0088a9;
+        --orangeColor: rgb(255, 166, 0);
+        --glassDark: rgba(0, 0, 0, 0.623);
+        --signGlass: rgba(0, 0, 0, 0.6);
+        --signInBg: grey;
+        --whiteBg: white;
+        --whiteGlass: rgba(255, 255, 255, 0.663);
+      }
+    </style>
+    <script src="../components/HeaderDefault.js" type="module"></script>
+    <script src="../components/Footer.js" type="module"></script>
+    <title>Sign in</title>
+  </head>
+  <body>
+    <!-- header буюу navigation хэсэг -->
+
+    <header-default></header-default>
+    <!-- main хэсэг -->
+    <main>
+      <!-- <user-login email="" password=""></user-login> -->
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+        button {
+          width: 100%;
+          padding: 9px 25px;
+          background-color: rgba(0, 136, 169, 1);
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          margin: 0px 10px;
+        }
+        button:hover {
+          background-color: rgba(0, 136, 169, 0.8);
+        }
+        .signInContainer {
+          background-image: url("img/Home/lookWindow2.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .darkGlassSignIn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 750px;
+          background-color: var(--glassDark);
+        }
+        .signInPage {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+          font-family: "Montserrat", sans-serif;
+          background-color: var(--signGlass);
+          color: var(--textColor);
+          width: 450px;
+          height: 500px;
+          border-radius: 30px;
+          padding: 20px 30px;
+          margin: 0 10px;
+        }
+        .signInPage input {
+          background-color: rgba(255, 255, 255, 0.75);
+        }
+        .signInPage .chooseWhich {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+        .signInPage h1 {
+          font-size: 24px;
+        }
+        .signInPage a {
+          color: var(--orangeColor);
+          margin: 0 5px;
+        }
+        .chooseWhich li {
+          list-style: none;
+        }
+        .signInPage a:hover {
+          color: var(--blueColor);
+        }
+        .activeLink a {
+          color: var(--blueColor);
+        }
+        input {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid rgb(195, 195, 195);
+        }
+        .inputForm {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 100%;
+          height: 35%;
+        }
+        .orSection {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          border-top: 1px dashed var(--whiteBg);
+          border-bottom: 1px dashed var(--whiteBg);
+        }
+
+        .zuraas1 {
+          width: 11vw;
+          border: 1px solid black;
+          border-top: none;
+          border-right: none;
+          border-left: none;
+        }
+        .zuraas2 {
+          width: 11vw;
+          border: 1px solid black;
+          padding: 0%;
+          border-top: none;
+          border-right: none;
+          border-left: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+          .signInPage p,
+          a {
+            font-size: 12px;
+          }
+          .signInPage h1 {
+            font-size: 16px;
+          }
+          button {
+            font-size: 12px;
+          }
+        }
+      </style>
+      <section class="signInContainer">
+        <section class="darkGlassSignIn">
+          <section class="signInPage">
+            <h1>Нэвтрэх</h1>
+            <p>Эргээд уулзахад та сайхан, эргүүлж мөлжихөд хүзүү сайхан</p>
+            <section class="chooseWhich">
+              <section class="activeLink">
+                <a href="/sing-in">Мэргэжилтнээр</a>
+              </section>
+              <section>
+                <a href="signInCompany.html">Компаниар</a>
+              </section>
+            </section>
+            <button><i class="fa-brands fa-google"></i> Google</button>
+            <section class="orSection">
+              <p>эсвэл</p>
+            </section>
+            <!-- FORM -->
+            <user-login email="" password=""></user-login>
+            <section class="chooseWhich">
+              <p>Шинээр орж байна уу?</p>
+              <a href="/sign-up">Бүртгүүлэх</a>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
+    <!-- footer хэсэг -->
+
+    <nito-footer></nito-footer>
+
+    <section class="copyright">
+      <hr />
+      <p>© 2021 Nito Pte Ltd. All rights reserved</p>
+    </section>
+    <script type="module" src="../components/Login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+:root {
+  --whiteColor: #edf0f1;
+  --greyBg: #24252a;
+  --blueColor: #0088a9;
+  --orangeColor: rgb(255, 166, 0);
+  --glassDark: rgba(0, 0, 0, 0.75);
+}
+.blogContainer {
+  width: calc(100% - 30%);
+}
+
+article ul li {
+  list-style-type: disc;
+  color: black;
+}
+.bannerBlog {
+  width: 100%;
+  height: 400px;
+  background-image: url("../../img/blogImg/office1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 80px;
+  color: var(--whiteColor);
+  font-family: "Montserrat", sans-serif;
+}
+
+.bannerGlass {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--glassDark);
+  border-radius: 80px;
+  padding: 100px;
+}
+
+.bannerGlass > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.bannerItem2 img {
+  width: 150px;
+}
+.bannerItem3 img {
+  width: 80px;
+  margin: 5px;
+}
+.bannerGlass h1 {
+  font-size: 25px;
+}
+.bannerItem2 {
+  border: 1px white solid;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+.bannerGlass .bannerItem3 {
+  border: 1px white solid;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
+@media only screen and (max-width: 1400px) {
+  .bannerItem2 {
+    border: none;
+  }
+  .bannerGlass .bannerItem3 {
+    border: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .bannerBlog {
+    width: 100%;
+    height: 300px;
+    border-radius: 60px;
+  }
+  .bannerGlass {
+    padding-top: 9%;
+    border-radius: 60px;
+  }
+  .bannerBlog h1 {
+    font-size: 16px;
+  }
+  .bannerBlog p {
+    font-size: 12px;
+  }
+  .bannerItem2 img {
+    width: 100px;
+  }
+  .bannerItem3 img {
+    width: 60px;
+    margin: 5px;
+  }
+  .bannerItem2 {
+    border: none;
+  }
+  .bannerGlass .bannerItem3 {
+    border: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .bannerBlog {
+    width: 100%;
+    height: 250px;
+    border-radius: 40px;
+  }
+  .bannerGlass {
+    padding: 40px 30px;
+    border-radius: 40px;
+  }
+  .bannerBlog h1 {
+    font-size: 14px;
+  }
+  .bannerBlog p {
+    font-size: 10px;
+  }
+  .bannerItem2 img {
+    display: none;
+  }
+  .bannerItem3 img {
+    width: 40px;
+    margin: 5px;
+  }
+  .bannerItem2 {
+    border: none;
+  }
+  .bannerGlass .bannerItem3 {
+    border: none;
+    margin-right: 30px;
+  }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+:root {
+    --whiteColor: #edf0f1;
+    --greyBg: #24252a;
+    --blueColor: #0088A9;
+    --orangeColor: rgb(255, 166, 0);
+    --glassDark: rgba(0, 0, 0, 0.75);
+}
+#blogDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 100px 25%;
+    font-family: "Montserrat", sans-serif;
+    line-height: 25px;
+}
+
+#blogDetails picture {
+    display: flex;
+    justify-content: center;
+}
+#blogDetails img {
+    width: 100%;
+}#blogDetails article {
+    margin: 20px 0;
+}
+#blogDetails section {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+}
+#blogDetails section h1 {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+#blogDetails li { 
+  color: var(--greyBg); 
+}
+
+#blogDetails h2 {
+  margin: 15px 0;
+}
+
+#blogDetails p {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 1000px) {
+    #blogDetails {
+        padding: 100px 20%;
+    }
+    #blogDetails section {
+        height: 80px;
+        margin: 5px 0;
+    }
+    #blogDetails section h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    #blogDetails h2 {
+      font-size: 18px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    #blogDetails {
+        padding: 100px 15%;
+        padding-bottom: 5%;
+    }
+    #blogDetails section {
+        height: 70px;
+        margin: 5px 0;
+    }
+    #blogDetails section h1 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    #blogDetails p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    #blogDetails article {
+        margin: 10px 0;
+    }
+}

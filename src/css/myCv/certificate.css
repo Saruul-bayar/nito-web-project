@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+:root {
+  --whiteColor: #edf0f1;
+  --asideGrey: #f1f1f1;
+  --blueColor: #0088a9;
+  --buttonHover: #0087a9b5;
+  --blueColorHover: #e5edf4;
+  --orangeColor: rgb(255, 166, 0);
+  --NumberGrey: rgb(164, 164, 164);
+  --linkBlack: rgb(18, 18, 18);
+  --borderGrey: grey;
+  --lineBlack: black;
+  --activeGreen: green;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+#bodyContainer {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "aside info info info"
+    "footer footer footer footer";
+  height: 100vh;
+}
+
+/* aside хэсгийн css код */
+aside .sidebar {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  background-color: var(--greyBg);
+  padding: 30px 0;
+}
+#backPage {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  color: var(--greyText);
+  margin-bottom: 2rem;
+  padding: 1rem 3rem;
+}
+#backPage a {
+  text-decoration: none;
+  color: var(--greyText);
+}
+#backPage i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* education хэсгийн код (main) */
+#certificate {
+  grid-area: info;
+  border: 1px solid var(--borderGrey);
+  padding: 2%;
+}
+header {
+  margin-bottom: 20px;
+}
+#certificateDateInfo > section {
+  display: flex;
+  flex-direction: column;
+}
+#certificateDateInfo > section select {
+  width: 25vw;
+  background-color: var(--asideGrey);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#certificationInput {
+  border: 1px solid var(--borderGrey);
+  border-radius: 10px;
+  padding: 10px;
+}
+.longInput {
+  margin-bottom: 20px;
+}
+.longInput input {
+  width: 54vw;
+  background-color: var(--asideGrey);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* footer хэсгийн код */
+#bodyContainer footer {
+  grid-area: footer;
+  border: 1px solid var(--borderGrey);
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.activeButton {
+  padding: 10px;
+  background-color: var(--blueColor);
+  color: var(--whiteColor);
+  border: 1px solid var(--asideGrey);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.activeButton:hover {
+  background-color: var(--buttonHover);
+  color: var(--orangeColor);
+}
+.defualtButton {
+  padding: 10px;
+  background-color: var(--whiteColor);
+  border: 1px solid var(--asideGrey);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.defualtButton:hover {
+  color: var(--orangeColor);
+}
+.footerButtonWrapper a {
+  margin: 0 5px;
+  text-decoration: none;
+}

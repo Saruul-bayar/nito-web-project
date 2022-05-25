@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Дундаж цалинаас өндөр ажлын байр хайж байвал та манай вебсайтаар зохилоход хангалттай. Nito дээр монголд байж болох хамгийн тав тухтай, цалин өндөртэй, эелдгээр хүлээж авах таны чадварыг хөгжүүлэх баг хамт олон хүлээж байна. Мэдээж компани болгон өөр өөрийн тусгай давуу талтай учир дуртай ажилаа сонгон CV-гээ илгээхэд л болно. CV-г бид таньд хялбар хийж болохуйцаар бэлдэж өгнө. If you are looking for a job above the average salary, all you have to do is visit our website. A team is waiting for you at Nito to develop your ability to be the most comfortable, well-paid and polite person in Mongolia. Of course, each company has its own special advantages, so just choose your favorite job and send your CV. We will prepare your CV as easily as possible."
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="img/aboutUsImg/nitoOnlyLogo.png"
+    />
+    <!-- CSS links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../css/myCV/certificate.css" />
+    <link rel="stylesheet" href="../../css/myCV/sidebar.css" />
+    <!-- Javascript links -->
+    <script
+      src="https://kit.fontawesome.com/8ff3c400c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Sidebar бичих template script -->
+    <!-- <script type="module" src="template.js"></script> -->
+    <script type="module" src="../../Cv.js"></script>
+    <title>Nito</title>
+    <script type="module" src="../../js/CvTemplate.js"></script>
+  </head>
+
+  <body>
+    <!-- Sidebar render -->
+    <aside>
+      <cv-sidebar></cv-sidebar>
+    </aside>
+
+    <section id="bodyContainer">
+      <!-- Main section -->
+      <main id="certificate">
+        <!-- Header Text -->
+        <header>
+          <h1>Сертификатууд</h1>
+          <p>
+            Ур чадвараа дээшлүүлж сурсан курс сертификат байвал оруулаарай.
+            Жишээ нь: aws certifications, хэлний оноо гэх мэт
+          </p>
+        </header>
+
+        <section id="certificateList"></section>
+
+        <!-- Сертификат нэмэх товч -->
+        <div class="buttonSecondary">
+          <button class="defualtButton" type="button" onclick="addElement()">
+            <span><i class="fa-solid fa-circle-plus"></i></span>
+            Нэмэх
+          </button>
+        </div>
+        <section id="certificateItems"></section>
+      </main>
+
+      <!-- Footer  -->
+      <footer>
+        <a href="education.html">
+          <button class="defualtButton" type="button" class="lightButton">
+            Өмнөх
+          </button>
+        </a>
+        <div class="footerButtonWrapper">
+          <a href="cv.html">
+            <button class="defualtButton" type="button" class="greyButton">
+              Хадгалаад гарах
+            </button>
+          </a>
+          <a href="/cv/create/social_links">
+            <button type="button" class="activeButton">Дараах</button>
+          </a>
+        </div>
+      </footer>
+    </section>
+    <script>
+      function addElement() {
+        let asideCss = document.getElementById("bodyContainer").children[0];
+        asideCss.style.height = "85vh";
+        document.getElementById("addContainer").innerHTML = `
+          
+        `;
+      }
+      function dissapearFrom() {
+        let asideCss = document.getElementById("bodyContainer").children[0];
+        asideCss.style.height = "85vh";
+        document.getElementById("addContainer").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

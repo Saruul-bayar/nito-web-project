@@ -1,0 +1,97 @@
+.gridSuggestion {
+  padding: 50px 15%;
+  font-family: "Montserrat", sans-serif;
+}
+.offerItems {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.gridSuggestion .suggestBox1,
+.gridSuggestion .suggestBox2,
+.gridSuggestion .suggestBox3,
+.gridSuggestion .suggestBox4,
+.gridSuggestion .suggestBox5,
+.gridSuggestion .suggestBox6 {
+  padding: 20px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+    opacity 0.3s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.gridSuggestion .isVisible {
+  opacity: 1;
+  transform: translateY(0) rotateZ(0);
+}
+
+.gridSuggestion img {
+  max-width: 20vw;
+}
+
+.gridSuggestion h2,
+h3 {
+  margin-top: 15px;
+}
+
+.gridSuggestion h3 {
+  font-size: 1.5rem;
+}
+.suggestTitle {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.suggestTitle h2 {
+  font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .gridSuggestion h3 {
+    font-size: 0.9rem;
+  }
+  .suggestTitle h2 {
+    font-size: 1.8rem;
+  }
+  .suggestTitle p {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .gridSuggestion > section {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .gridSuggestion img {
+    max-width: 50vw;
+  }
+  .suggestTitle h2 {
+    font-size: 1.8rem;
+  }
+  .gridSuggestion h3 {
+    font-size: 0.9rem;
+  }
+  .suggestTitle p {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .gridSuggestion > section {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .suggestTitle h2 {
+    font-size: 1.6rem;
+  }
+  .gridSuggestion h3 {
+    font-size: 1.2rem;
+  }
+  .suggestTitle p {
+    font-size: 0.8rem;
+  }
+}

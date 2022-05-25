@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+:root {
+  --whiteColor: #edf0f1;
+  --greyBg: #24252a;
+  --blueColor: #0088a9;
+  --blueColorHover: rgba(0, 136, 169, 0.8);
+  --orangeColor: rgb(255, 166, 0);
+  --glassDark: rgba(0, 0, 0, 0.623);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Нийт том хэсэг буюу page хуудас */
+.cvPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  background-color: #edf0f1;
+}
+
+/* CV-ны гол хэсэг css code */
+.cvMainInfo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "ognoo ognoo"
+    "profile profile"
+    "miniiTuhai contact"
+    "ajil skill"
+    "edu edu";
+  gap: 10px 10px;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 30px;
+  color: #333;
+  background-color: white;
+}
+
+.cvMainTop {
+  grid-area: ognoo;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.cvMainTop .date {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.cvMainTop button {
+  color: #fff;
+}
+
+#cvMainAvatar {
+  grid-area: profile;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+#aboutMeInfo {
+  grid-area: miniiTuhai;
+  border: 1px solid #333;
+  border-radius: 30px;
+}
+#contanctInfo {
+  grid-area: contact;
+  border: 1px solid #333;
+  border-radius: 30px;
+}
+#experienceInfo {
+  grid-area: ajil;
+  border: 1px solid #333;
+  border-radius: 30px;
+}
+#skillInfo {
+  grid-area: skill;
+  border: 1px solid #333;
+  border-radius: 30px;
+}
+#educationInfo {
+  grid-area: edu;
+  border: 1px solid #333;
+  border-radius: 30px;
+}
+#cvMainAvatar img {
+  width: 100px;
+  height: 100px;
+}
+.flexBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cvMainInfoItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+}
+
+/* CV Complete хэсгийн css */
+#cvComplete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  border: 1px solid #333;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  background-color: white;
+}
+
+.cvCompleteText {
+  width: 350px;
+}
+
+#cvComplete a {
+  color: var(--orangeColor);
+}
+#cvComplete a:hover {
+  color: var(--blueColor);
+}
+
+#cvComplete h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#cvComplete img {
+  width: 150px;
+  height: 150px;
+}
+
+/* Хүсэж буй ажил хэсэг css code */
+#cvIntendedJobs {
+  width: 50%;
+  border: 1px solid #333;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: white;
+}
+
+#cvIntendedJobs #title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#cvIntendedJobs #title a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  color: var(--blueColor);
+  border-radius: 50%;
+}
+#cvIntendedJobs #title a:hover {
+  color: var(--blueColorHover);
+  background-color: rgb(204, 204, 204);
+}
+
+#cvIntentedJobsList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+#ajliinChiglel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cvIntendedJob {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 5px;
+}
+
+/* resposive css code */
+@media screen and (max-width: 1100px) {
+  .cvPage p {
+    font-size: 14px;
+  }
+  .cvPage h1 {
+    font-size: 16px;
+  }
+  .cvPage h2 {
+    font-size: 18px;
+  }
+  .cvPage h3 {
+    font-size: 18px;
+  }
+  .cvMainInfo {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ognoo"
+      "profile"
+      "miniiTuhai"
+      "contact"
+      "ajil"
+      "skill"
+      "edu";
+    width: 70%;
+  }
+  #cvIntendedJobs {
+    width: 70%;
+  }
+  #cvComplete {
+    width: 70%;
+  }
+  .cvIntendedJob img {
+    width: 80px;
+    height: 80px;
+  }
+  #cvComplete img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cvPage p {
+    font-size: 12px;
+  }
+  .cvPage h1 {
+    font-size: 14px;
+  }
+  #cvComplete h1 {
+    font-size: 20px;
+  }
+  .cvPage h2 {
+    font-size: 16px;
+  }
+  .cvPage h3 {
+    font-size: 16px;
+  }
+  .cvMainInfo {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ognoo"
+      "profile"
+      "miniiTuhai"
+      "contact"
+      "ajil"
+      "skill"
+      "edu";
+    width: 90%;
+  }
+  #cvIntendedJobs {
+    width: 90%;
+  }
+  #cvComplete {
+    width: 90%;
+  }
+  .cvIntendedJob img {
+    width: 35px;
+    height: 35px;
+  }
+  #cvComplete img {
+    width: 100px;
+    height: 100px;
+  }
+  button {
+    font-size: 12px;
+  }
+}

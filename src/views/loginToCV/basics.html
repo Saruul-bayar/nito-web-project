@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Дундаж цалинаас өндөр ажлын байр хайж байвал та манай вебсайтаар зохилоход хангалттай. Nito дээр монголд байж болох хамгийн тав тухтай, цалин өндөртэй, эелдгээр хүлээж авах таны чадварыг хөгжүүлэх баг хамт олон хүлээж байна. Мэдээж компани болгон өөр өөрийн тусгай давуу талтай учир дуртай ажилаа сонгон CV-гээ илгээхэд л болно. CV-г бид таньд хялбар хийж болохуйцаар бэлдэж өгнө. If you are looking for a job above the average salary, all you have to do is visit our website. A team is waiting for you at Nito to develop your ability to be the most comfortable, well-paid and polite person in Mongolia. Of course, each company has its own special advantages, so just choose your favorite job and send your CV. We will prepare your CV as easily as possible."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/8ff3c400c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../css/cv.css" />
+    <title>Nito</title>
+  </head>
+
+  <!-- Sidebar бичих template script -->
+  <script type="module" src="../../js/CvTemplate.js"></script>
+  <body>
+    <!-- Sidebar render -->
+    <aside>
+      <cv-sidebar></cv-sidebar>
+    </aside>
+
+    <div class="container">
+      <!-- Header Text -->
+      <header>
+        <h1>Үндсэн мэдээлэл</h1>
+        <p>Өөрийгөө товч танилцуулаарай.</p>
+      </header>
+
+      <!-- Main Content -->
+      <main id="basics">
+        <div class="avatar">
+          <i class="fa-solid fa-circle-user"></i>
+          <form action="/img" method="POST">
+            <input id="imgFile" name="img" type="file" accept="image/*" />
+            <label for="imgFile">Choose file</label>
+            <button type="submit">Upload</button>
+          </form>
+          <div id="imgDisplay"></div>
+        </div>
+        <!-- Personal Information Input Section -->
+        <section id="cvBasicsForm"></section>
+      </main>
+    </div>
+    <!-- Footer  -->
+    <footer>
+      <button type="button" class="disabledButton">
+        <a href="javascript:function() { return false;}">Өмнөх</a>
+      </button>
+      <div class="footerButtonWrapper">
+        <button type="button" class="greyButton">
+          <a href="./cv.html">Хадгалаад гарах</a>
+        </button>
+        <button type="button" class="primaryButton">
+          <a href="./experience.html">Дараах</a>
+        </button>
+      </div>
+    </footer>
+    <script>
+      const inputImg = document.getElementById("imgFile");
+      const uploaded_img = "";
+
+      inputImg.addEventListener("change", () => {
+        const reader = new FileReader();
+        inputImg.style.color = "red";
+        reader.addEventListener("load", () => {
+          uploaded_img = reader.result;
+          console.log(uploaded_img);
+        });
+        reader.readAsDataURL(this.files[0]);
+      });
+    </script>
+    <script type="module" src="../../Cv.js"></script>
+  </body>
+</html>

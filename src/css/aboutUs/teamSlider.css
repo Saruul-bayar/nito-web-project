@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+    --whiteColor: #edf0f1;
+    --greyBg: #24252a;
+    --blueColor: #0088A9;
+    --orangeColor: rgb(255, 166, 0);
+    --glassDark: rgba(0, 0, 0, 0.623);
+    --sliderBg: #24252a0d;
+}
+.teamSlider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    margin: 50px 0;
+    background-color: var(--sliderBg);
+}
+.teamSlider .sliderSection {
+    display: flex;
+    flex-direction: row;
+}
+
+.teamSlider .sliderSection label {
+    display: flex;
+    flex-direction: row;
+}
+.teamSlider .sliderSection label h1 {
+    color: var(--orangeColor);
+}
+.teamSlider .sliderSection label p {
+    color: var(--greyBg);
+}
+.teamSlider .sliderSection label section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(127, 255, 212, 0.455);
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+.teamSlider .sliderSection label section img {
+    width: 100px;
+    height: 100px;
+}

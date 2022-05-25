@@ -1,0 +1,49 @@
+aside .sidebar {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  background-color: var(--greyBg);
+  padding: 30px 0;
+}
+#backPage {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  color: var(--greyText);
+  margin-bottom: 2rem;
+  padding: 1rem 3rem;
+}
+#backPage a {
+  text-decoration: none;
+  color: var(--greyText);
+}
+#backPage i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+aside .sidebar ul li {
+  padding: 0.6rem 3rem;
+  color: var(--greyText);
+  box-sizing: border-box;
+}
+aside .sidebar ul li a {
+  display: block;
+  color: var(--greyText);
+}
+aside .sidebar ul li a .sidebarNumber {
+  display: inline-block;
+  width: 1.8rem;
+  line-height: 1.8rem;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 0.3rem;
+  background-color: var(--greyBgDark);
+  color: var(--white);
+}
+aside .sidebar ul li:hover {
+  background-color: var(--greyActive);
+}
+aside .sidebar ul li:hover a {
+  color: black;
+  font-weight: bold;
+}

@@ -1,0 +1,95 @@
+.bigBannerCompany {
+    height: 100vh;
+    background-image: url('../../img/homeCompanyImg/companyBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: "Montserrat", sans-serif;
+    color: var(--textColor);
+}
+
+.companyBannerGlass {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.693);
+}
+
+.bigBannerCompany h1 {
+    font-size: 80px;
+}
+
+.bigBannerCompany p {
+    margin-bottom: 20px;
+}
+
+.bannerTopCompnay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 90%;
+    padding: 10%;
+}
+.bannerBottomCompnay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.bannerBottomCompany p a {
+    text-decoration: underline;
+}
+.titleCompanyBanner {
+    color: var(--orangeColor);
+}
+@media only screen and (max-width: 1270px) {
+    .bannerBottomCompnay {
+        padding: 0 10%;
+    }
+    .bannerTopCompnay h1 {
+        font-size: 75px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .bannerTopCompnay {
+        padding: 100px 15%;
+    }
+    .bigBannerCompany p {
+        font-size: 14px;
+    }
+    .bigBannerCompany a {
+        font-size: 14px;
+    }
+    .bannerTopCompnay h1 {
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .bigBannerCompany {
+        height: 80vh;
+    }
+    .bigBannerCompany h1 {
+        font-size: 55px;
+    }
+    .bigBannerCompany p {
+        font-size: 12px;
+    }
+    .bigBannerCompany a {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .bannerTopCompnay {
+        padding: 100px 10%;
+    }
+    .bigBannerCompany h1 {
+        font-size: 35px;
+    }
+    .bigBannerCompany p {
+        font-size: 12px;
+    }
+    .bigBannerCompany a {
+        font-size: 12px;
+    }
+}

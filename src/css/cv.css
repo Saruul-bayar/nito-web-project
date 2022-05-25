@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+}
+:root {
+  --white: #fff;
+  --greyBg: #24252a;
+  --primaryBg: #f1eeee;
+  --blue: #2196f3;
+  --greyBg: #f9f9f9;
+  --orange: rgb(255, 166, 0);
+  --greyText: #6e7c87;
+  --greyActive: #e5edf4;
+  --greyBgDark: #99a5ad;
+  --greyBorder: #bababa;
+}
+
+/* CLASSES */
+.inputBorder {
+  border-radius: 5px;
+  border: 1px solid var(--greyBorder);
+}
+
+.greyText {
+  color: var(--greyText);
+  margin-bottom: 1rem;
+}
+.selectItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  /* width: 400px; */
+  justify-content: space-between;
+}
+
+/* BASICS */
+#basics {
+  display: grid;
+  grid-template-columns: 23rem 200px;
+  /* grid-template-rows: 1fr 1fr; */
+  grid-template-areas:
+    "avatar ." "nameInput sureNameInput"
+    "emailInput phoneInput" "textarea textarea";
+}
+.avatar i {
+  grid-area: avatar;
+  font-size: 100px;
+  margin-bottom: 2.5rem;
+}
+.nameInput {
+  grid-area: nameInput;
+  margin-bottom: 1.5rem;
+}
+.sureNameInput {
+  grid-area: sureNameInput;
+}
+.emailInput {
+  grid-area: emailInput;
+}
+
+.phoneInput {
+  grid-area: phoneInput;
+}
+.textAreaInput {
+  grid-area: textarea;
+  margin-top: 2rem;
+}
+
+.textAreaInput textarea {
+  border: none;
+  background-color: var(--greyBg);
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--greyActive);
+}
+.container {
+  width: 50%;
+  margin-left: 25%;
+  padding: 5rem 10rem;
+}
+.container header {
+  margin-bottom: 2rem;
+}
+.container header h1 {
+  color: black;
+  font-size: 1.8rem;
+}
+.container header p {
+  color: var(--greyText);
+}
+.input input {
+}
+.input p {
+  margin-bottom: 0.5rem;
+}
+
+/* sidebar */
+
+aside .sidebar {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  background-color: var(--greyBg);
+  padding: 30px 0;
+}
+#backPage {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  color: var(--greyText);
+  margin-bottom: 2rem;
+  padding: 1rem 3rem;
+}
+#backPage a {
+  text-decoration: none;
+  color: var(--greyText);
+}
+#backPage i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+aside .sidebar ul li {
+  padding: 0.6rem 3rem;
+  color: var(--greyText);
+  box-sizing: border-box;
+}
+aside .sidebar ul li a {
+  display: block;
+  color: var(--greyText);
+}
+aside .sidebar ul li a .sidebarNumber {
+  display: inline-block;
+  width: 1.8rem;
+  line-height: 1.8rem;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 0.3rem;
+  background-color: var(--greyBgDark);
+  color: var(--white);
+}
+aside .sidebar ul li:hover {
+  background-color: var(--greyActive);
+}
+aside .sidebar ul li:hover a {
+  color: black;
+  font-weight: bold;
+}
+
+#basics p {
+  color: var(--greyText);
+}
+#basics input {
+  border: none;
+  background-color: var(--greyBg);
+  width: 20rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--greyActive);
+}
+
+.btnPrimary {
+  border: 1px solid var(--greyBorder);
+  border-radius: 5px;
+  color: var(--blue);
+  padding: 0.9rem 1rem;
+  width: 9rem;
+  background-color: white;
+}
+.btnPrimary i {
+  color: var(--blue);
+  margin-right: 4px;
+}
+
+#workHistoryInputs {
+  display: grid;
+  border: 1px solid var(--greyBorder);
+  border-radius: 5px;
+  padding: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "position position"
+    "company company"
+    "empState empState"
+    "empDate unEmpDate"
+    "moreWork moreWork"
+    ". saveBtn";
+}
+#workHistoryInputs input {
+  width: 100%;
+}
+#workHistoryInputs textarea {
+  width: 100%;
+  height: 10rem;
+}
+#workPosition {
+  grid-area: position;
+  margin-bottom: 1rem;
+}
+
+#companyName {
+  grid-area: company;
+  margin-bottom: 1rem;
+}
+#currentEmploymentState {
+  grid-area: empState;
+  margin-bottom: 1rem;
+}
+.employmentDate {
+  grid-area: empDate;
+  margin-bottom: 1rem;
+}
+.unEmploymentDate {
+  grid-area: unEmpDate;
+  margin-bottom: 1rem;
+}
+#moreAboutWork {
+  grid-area: moreWork;
+  margin-bottom: 1rem;
+}
+
+.checkboxInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--greyText);
+}
+.saveButton {
+  grid-area: saveBtn;
+  float: right;
+}
+section label {
+  display: block;
+  color: var(--greyText);
+}
+select {
+  width: 100%;
+}
+
+/* SKILLS */
+#skillsInupt {
+  width: 100%;
+  height: 6rem;
+  background-color: var(--greyBg);
+  padding: 1.1rem;
+}
+
+.skillsList {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+/* Education */

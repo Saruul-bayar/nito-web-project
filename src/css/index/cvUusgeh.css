@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+:root {
+  --clWhite: white;
+  --clGrey: #24252a;
+  --clBlue: #0088a9;
+  --clOrange: #ffc000;
+  --clLightBlue: #98e4f4;
+}
+
+.gridCV {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: var(--bgWhite);
+  padding: 40px 15%;
+  font-family: "Montserrat", sans-serif;
+  grid-gap: 10px;
+}
+.gridCV .item1,
+.gridCV .item2,
+.gridCV .item3,
+.gridCV .item4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  opacity: 1;
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+    opacity 0.3s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.benefitItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.benefitItems .item2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.benefitItems.item3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.benefitItems.item4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.gridCV .isVisible {
+  opacity: 1;
+  transform: translateY(0) rotateZ(0);
+}
+
+.gridCV .benefitItems .isVisible {
+  opacity: 1;
+  transform: translateY(0) rotateZ(0);
+}
+
+.gridCV .benefitItems img {
+  max-width: 20vw;
+}
+
+.gridCV h3 {
+  font-size: 1.5rem;
+}
+
+.item1 h2 {
+  font-size: 2.5rem;
+}
+
+.item1 .how {
+  background-color: var(--clLightBlue);
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .item1 h2 {
+    font-size: 1.8rem;
+  }
+  .gridCV h3 {
+    font-size: 1.3rem;
+  }
+  .gridCV p {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .gridCV > section {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .gridCV img {
+    max-width: 50vw;
+  }
+  .item1 h2 {
+    font-size: 1.8rem;
+  }
+  .gridCV h3 {
+    font-size: 1.2rem;
+  }
+  .gridCV p {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .gridCV > section {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .item1 h2 {
+    font-size: 1.6rem;
+  }
+  .gridCV h3 {
+    font-size: 0.9rem;
+  }
+  .gridCV p {
+    font-size: 0.8rem;
+  }
+}

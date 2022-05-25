@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+    --whiteColor: #edf0f1;
+    --greyBg: #24252a;
+    --blueColor: #0088A9;
+    --orangeColor: rgb(255, 166, 0);
+    --glassDark: rgba(0, 0, 0, 0.623);
+}
+.gridText {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    font-family: "Montserrat", sans-serif;
+}
+.gridText a {
+    color: var(--orangeColor);
+}
+.gridText a:hover {
+    color: var(--blueColor);
+}
+.leftSideText {
+    padding: 50px 50px 0 50px;
+}
+.leftSideText article {
+    margin-bottom: 20px;
+}
+.rightSideText {
+    padding: 50px 50px 0 50px;
+}
+.rightSideText section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .leftSideText h2 {
+        font-size: 18px;
+    }
+    .leftSideText p {
+        font-size: 12px;
+    }
+    .rightSideText {
+        font-size: 12px;
+    }
+    .rightSideText a {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 1020px) {
+    .gridText > section {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}

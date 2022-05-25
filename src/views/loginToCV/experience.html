@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Дундаж цалинаас өндөр ажлын байр хайж байвал та манай вебсайтаар зохилоход хангалттай. Nito дээр монголд байж болох хамгийн тав тухтай, цалин өндөртэй, эелдгээр хүлээж авах таны чадварыг хөгжүүлэх баг хамт олон хүлээж байна. Мэдээж компани болгон өөр өөрийн тусгай давуу талтай учир дуртай ажилаа сонгон CV-гээ илгээхэд л болно. CV-г бид таньд хялбар хийж болохуйцаар бэлдэж өгнө. If you are looking for a job above the average salary, all you have to do is visit our website. A team is waiting for you at Nito to develop your ability to be the most comfortable, well-paid and polite person in Mongolia. Of course, each company has its own special advantages, so just choose your favorite job and send your CV. We will prepare your CV as easily as possible."
+    />
+    <!-- Css links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../css/myCV/experience.css" />
+    <!-- Javascript links -->
+    <script
+      src="https://kit.fontawesome.com/8ff3c400c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../../Cv.js"></script>
+    <script type="module" src="../../js/CvTemplate.js"></script>
+    <!-- Card хэсэгт дархад expand хийх script -->
+    <!-- <script src="main.js"></script> -->
+    <title>Nito</title>
+    <!-- Card дээр дархад expand хийх css -->
+    <style>
+      .active {
+        height: 250px;
+      }
+      .activeQuestionBtn {
+        background-color: aquamarine;
+        border-radius: 50%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="bodyContainer">
+      <!-- Sidebar render -->
+      <aside>
+        <cv-sidebar activeAside="2"></cv-sidebar>
+      </aside>
+
+      <!-- Main section -->
+      <main id="experience">
+        <!-- Header Text -->
+        <header>
+          <h1>Мэргэжил, мэргэшил</h1>
+          <p>
+            Ажлын чиглэлээ туршлагын хамт оруулна. Жишээ нь: Front-end ээр
+            мэргэшсэн Software Engineer.
+          </p>
+        </header>
+        <!-- Хадгалсан / Оруулсан туршлагын мэдээлэл энд байна -->
+        <section id="experienceList"></section>
+
+        <!-- Туршлага / Мэрэгжил нэмэх товч -->
+        <div class="button">
+          <button type="button" onclick="addElement()">
+            <span><i class="fa-solid fa-circle-plus"></i></span>
+            Нэмэх
+          </button>
+        </div>
+        <div id="experienceInfoWrapper">
+          <!-- Нэмэх дарах үед мэдээлэл авах хэсэг -->
+          <div class="experienceNavigator">
+            <p class="numberExpreience activeNumber">1</p>
+            <p class="activeNavigator">Чиглэл</p>
+            <div id="exprienceZuraas"></div>
+            <p class="numberExpreience">2</p>
+            <p>Мэргэшил</p>
+          </div>
+          <p>Чиглэл</p>
+          <!-- <div class="experienceItems"> -->
+          <section id="cvExperienceProfession"></section>
+          <section id="cvExperienceSpecification"></section>
+          <!-- </div> -->
+        </div>
+      </main>
+      <!-- Footer  -->
+      <footer>
+        <a href="/cv/create/basics">
+          <button type="button" class="lightButton">Өмнөх</button>
+        </a>
+        <div class="footerButtonWrapper">
+          <a href="cv.html">
+            <button type="button" class="greyButton">Хадгалаад гарах</button>
+          </a>
+          <a href="/cv/create/work_history">
+            <button type="button" class="activeButton">Дараах</button>
+          </a>
+        </div>
+      </footer>
+    </section>
+    <script>
+      function addElement() {
+        // let asideCss = document.getElementById("bodyContainer").children[0];
+        // asideCss.style.height = "auto";
+        const addBtn = (document.getElementById(
+          "experienceInfoWrapper"
+        ).style.display = "block");
+
+        // document.getElementById("addContainer").innerHTML =
+      }
+      // addElement();
+      function dissapearFrom() {
+        let asideCss = document.getElementById("bodyContainer").children[0];
+        asideCss.style.height = "85vh";
+        document.getElementById("addContainer").innerHTML = "";
+      }
+      function changeChecked(id) {
+        let isChecked = document.querySelectorAll(".experienceItem");
+        let j = 1;
+        for (let i = 0; i < isChecked.length; i++) {
+          if (j == id) {
+            let nodes = isChecked[i].childNodes;
+            let position;
+            nodes.forEach((val, key) => {
+              if (val.classList) {
+                if (val.classList[0] === "expHiddenContent") {
+                  position = key;
+                }
+              }
+            });
+            let item = isChecked[i].childNodes[position];
+            let form = item.childNodes[3];
+            if (isChecked[i].classList.contains("expandItems")) {
+              if (form[0].value == null || form[0].value == "") return;
+              if (!(form[0].value == null || form[0].value == "")) {
+                isChecked[i].classList.remove("expandItems");
+                item.classList.remove("expVisibleContent");
+              }
+            } else {
+              isChecked[i].classList.add("expandItems");
+              item.classList.add("expVisibleContent");
+            }
+          }
+          j += 10;
+        }
+      }
+    </script>
+  </body>
+</html>

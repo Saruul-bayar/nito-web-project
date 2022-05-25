@@ -1,0 +1,10 @@
+.VideoSection {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.VideoSection video {
+    width: 70%;
+    border-radius: 30px;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Дундаж цалинаас өндөр ажлын байр хайж байвал та манай вебсайтаар зохилоход хангалттай. Nito дээр монголд байж болох хамгийн тав тухтай, цалин өндөртэй, эелдгээр хүлээж авах таны чадварыг хөгжүүлэх баг хамт олон хүлээж байна. Мэдээж компани болгон өөр өөрийн тусгай давуу талтай учир дуртай ажилаа сонгон CV-гээ илгээхэд л болно. CV-г бид таньд хялбар хийж болохуйцаар бэлдэж өгнө. If you are looking for a job above the average salary, all you have to do is visit our website. A team is waiting for you at Nito to develop your ability to be the most comfortable, well-paid and polite person in Mongolia. Of course, each company has its own special advantages, so just choose your favorite job and send your CV. We will prepare your CV as easily as possible.">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/8ff3c400c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Nito</title>
+  </head>
+
+  <!-- Card дээр дархад expand хийх css -->
+  <style>
+    .active {
+      height: 250px;
+    }
+    .activeQuestionBtn {
+      background-color: aquamarine;
+      border-radius: 50%;
+      border: none;
+    }
+  </style>
+
+  <body>
+    <!-- Header Text -->
+    <header>
+      <h1>Хүсч буй ажил</h1>
+      <h2>Цалингийн хүлээлт</h2>
+      <p class="colorGrey">
+        Хүсч буй цалингийн доод хэмжээ. Компаниудад харагдахаас гадна таны
+        цалингийн хүлээлтэнд нийцсэн заруудыг хүргэнэ.
+      </p>
+      <input id="intendedSalary" type="number" placeholder="1,000,000" />
+    </header>
+
+    <!-- Main section -->
+    <main id="itendedJobs">
+      <header>
+        <h1>Ажлын чиглэл</h1>
+        <p class="colorGrey">
+          Үндсэн мэргэжлээсээ гадна хийж үзэхийг хүссэн нэмэлт чиглэлээ сонгох
+          боломжтой
+        </p>
+      </header>
+
+      <!-- Үндсэн мэдээлэл оруулах хэсэг -->
+        <div class="experienceItems">
+          <section class="experienceItem">
+            <img src="./images/laptop.png" alt="software_hardware" />
+            <article class="experienceTitle">
+              <h2>Software / Hardware</h2>
+              <p>Frontend Engineer, QA Engineer, Game Developer</p>
+            </article>
+            <button class="questionIcon" type="button">?</button>
+          </section>
+          <section class="experienceItem">
+            <img src="./images/backpack.png" alt="internship" />
+            <article class="experienceTitle">
+              <h2>Inernship</h2>
+              <p>Work experience</p>
+            </article>
+            <button class="questionIcon" type="button">?</button>
+          </section>
+          <section class="experienceItem">
+            <img src="./images/management.png" alt="management" />
+            <article class="experienceTitle">
+              <h2>Management</h2>
+              <p>CTO, CIO, CFO</p>
+            </article>
+            <button type="button">?</button>
+          </section>
+          <section class="experienceItem">
+            <img src="./images/design.png" alt="design" />
+            <article class="experienceTitle">
+              <h2>Design</h2>
+              <p>Product Designer, UX Designer, UX Researcher</p>
+            </article>
+            <button class="questionIcon" type="button">?</button>
+          </section>
+          <section class="experienceItem">
+            <img src="./images/information_technology.png" alt="IT" />
+            <article class="experienceTitle">
+              <h2>Information Technology (IT)</h2>
+              <p>DevOps, Solutions Architect, Security Specialist</p>
+            </article>
+            <button class="questionIcon" type="button">?</button>
+          </section>
+          <section class="experienceItem">
+            <img src="./images/data.png" alt="Data" />
+            <article class="experienceTitle">
+              <h2>Data</h2>
+              <p>Data Analyst, Data Scientist, Data Egnineer</p>
+            </article>
+            <button class="questionIcon" type="button">?</button>
+          </section>
+          <section class="experienceItem">
+            <img src="./images/hr_admin.png" alt="HR Admin" />
+            <article class="experienceTitle">
+              <h2>HR Admin</h2>
+              <p>HR Management, Secretary, Office Assistant</p>
+            </article>
+            <button class="questionIcon" type="button">?</button>
+          </section>
+          <section class="experienceItem">
+            <img src="./images//sales_marketing.png" alt="Sales Marketing" />
+            <article class="experienceTitle">
+              <h2>Sales Marketing</h2>
+              <p>Marketing Specialist, Social Media Marketing, Sales Manager</p>
+            </article>
+            <button type="button">?</button>
+          </section>
+          <section class="experienceItem">
+            <img src="./images//finance.png" alt="Finance" />
+            <article class="experienceTitle">
+              <h2>Finance</h2>
+              <p>Financial Planning/Analysis, Accountant, Risk Management</p>
+            </article>
+            <button class="questionIcon" type="button">?</button>
+          </section>
+          <section class="experienceItem">
+            <img
+              src="./images/business_development_legal.png"
+              alt="Business Development"
+            />
+            <article class="experienceTitle">
+              <h2>Business Development / Legal</h2>
+              <p>Business Development, Investor Relation, Lawyer</p>
+            </article>
+            <button class="questionIcon" type="button">?</button>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer  -->
+    <footer>
+        <button type="button" class="primaryButton">
+          <a href="./cv.html">Дараах</a>
+        </button>
+    </footer>
+  </body>
+</html>

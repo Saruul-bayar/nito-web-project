@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+    --textColor: #edf0f1;
+    --greyBg: #24252a;
+    --blueColor: #0088A9;
+    --titleColor: #FFC000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+li, a {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--greyBg);
+}
+
+.footerLogo img {
+    width: 150px;
+}
+
+footer li, a {
+    list-style: none;
+    transition: all 0.3s ease 0s;
+}
+
+footer li, a:hover {
+    color: var(--blueColor);
+}
+
+footer section h4 {
+    color: var(--titleColor);
+}
+
+footer ul li {
+    margin: 10px 0;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+.links section {
+    margin: 0px 40px;
+}
+
+.copyright {
+    font-family: "Matserrat", sans-serif;
+    color: var(--textColor);
+    background-color: var(--greyBg);
+    padding: 20px 10%;
+}
+
+.copyright p {
+    margin-top: 20px;
+}
+
+/* responsive css */
+@media screen and (max-width: 700px) {
+    .footerLogo img {
+        width: 110px;
+    }
+    .links section {
+        margin: 0px 15px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .footerLogo {
+        margin-bottom: 30px;
+    }
+    .footerLogo img {
+        width: 100px;
+    }
+    footer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 30px 10%;
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+    .links section {
+        margin: 15px 0px;
+    }
+    .copyright p {
+        font-size: 13px;
+    }
+}
